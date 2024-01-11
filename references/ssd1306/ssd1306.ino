@@ -32,5 +32,23 @@ void loop() {
 
   display.display();
   delay(2000); // Hiển thị "Hello World" trong 2 giây, sau đó xóa màn hình
-  display.clearDisplay();
+  
+  int centerX = SCREEN_WIDTH / 2;
+  int centerY = SCREEN_HEIGHT / 2;
+  int length = 20; // Chiều dài đoạn góc
+
+  // Tính toán tọa độ đỉnh của góc
+  for (int i=1; i<=180; i++) {
+    int x2 = centerX + length * cos(PI/(180/i));
+    int y2 = centerY + length * sin(PI/(180/i));
+
+    // Vẽ đoạn thẳng từ trung tâm đến đỉnh góc
+    display.drawLine(centerX, centerY, x2, y2, SSD1306_WHITE);
+
+    // Hiển thị màn hình
+    display.display();
+
+    delay(100);
+  }
+    display.clearDisplay();
 }
