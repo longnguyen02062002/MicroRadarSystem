@@ -9,6 +9,9 @@ Dự án được tham khảo từ các tài liệu sau:
 +---servo               # Điều khiển servo
 |       servo.ino
 |
++---tilt_sensor
+|       tilt_sensor.ino # Cảm biến vật nghiêng hay không nghiêng
+|
 \---ssd1306             # Màn hình OLED 2 màu
         ssd1306.ino
 ```
