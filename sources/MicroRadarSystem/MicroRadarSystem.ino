@@ -61,7 +61,7 @@ void loop () {
     if (angle <= 0) { dir = 1;} // dao chieu quay;
     myServo.write(angle);   
   }
-  delay(10);
+  //delay(10);
 
   //--------------------------------------------------------------------------------------
   //Do khoang cach nho cam bien sieu am HC-SR04
@@ -80,7 +80,7 @@ void loop () {
     //Serial.print ("Distance: ");
     //Serial.print (distance);
     //Serial.println (" cm");
-    delay (10);
+    //delay (10);
   }  
 
   //--------------------------------------------------------------------------------------
@@ -100,7 +100,7 @@ void loop () {
     int y0 = 10;
     int dis = distance/(566/SCREEN_WIDTH);
     display.drawLine (x0, y0, dis, y0, SSD1306_WHITE);
-    delay(10);
+    //delay(10);
 
     // Cam bien nghieng hay khong nghieng
     int sensorValue = digitalRead(sensorPin);
@@ -110,7 +110,7 @@ void loop () {
     else
       display.println("No tilt");
 
-    delay(10);
+    //delay(10);
   }
 
   // Hien thi goc quet cua servo
@@ -131,7 +131,7 @@ void loop () {
     display.drawLine(centerX, centerY, x2, y2, SSD1306_WHITE);
 
     display.display();
-    delay(10);
+    //delay(10);
     display.clearDisplay();
   }
 }
